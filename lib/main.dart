@@ -4,12 +4,18 @@ import 'package:flutter/material.dart';
 import 'package:spotify_redesign/Icon_container.dart';
 import 'package:spotify_redesign/time_container.dart';
 import 'constants.dart';
+import 'package:audioplayers/audioplayers.dart';
 
 void main() {
   runApp(MySpotify());
 }
 
-class MySpotify extends StatelessWidget {
+class MySpotify extends StatefulWidget {
+  @override
+  State<MySpotify> createState() => _MySpotifyState();
+}
+
+class _MySpotifyState extends State<MySpotify> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -188,7 +194,7 @@ class MySpotify extends StatelessWidget {
                     value: 2.0,
                     min: 1,
                     max: 10,
-                    onChanged: (double newValue) {},
+                    onChanged: (value) {},
                   ),
                 ),
               ),
